@@ -4,7 +4,11 @@
 
 2. Everyone must fork from the codeofhonors-msimbo-website repo.
 
-3. Everyone must clone the repo into their local repo (rename it if necessary)
+3. Everyone must clone the repo into their local repo (rename it if necessary).
 
-4.
+4. Work of the cloned repo, revert to a earlier version of the repo if necessary.
+
+
+
+
 
