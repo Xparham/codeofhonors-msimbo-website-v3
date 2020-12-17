@@ -13,15 +13,20 @@ contactForm.addEventListener('submit', function (e) {
     validateEmpty(subject)
     validateEmpty(content)
 
+    validateIsEmail(email)
 
-    validateMinLength(u-name)
+
+    validateMinLength(entry)
+    validateMinLength(content)
+    validateMinLength(subject)
+
   
 
     validateIsEmail(email)
    
 
 
-    validateMinLength(password, password2)
+   
   })
 
   function validateEmpty(entry) {
@@ -33,14 +38,14 @@ contactForm.addEventListener('submit', function (e) {
     }
   }
 
-  function validateEmpty(email) {
-    console.log(email)
-    if (email.value === '') {
-        showError(email)
-    } else {
-        showSuccess(email)
-    }
-  }
+//   function validateEmpty(email) {
+//     console.log(email)
+//     if (email.value === '') {
+//         showError(email)
+//     } else {
+//         showSuccess(email)
+//     }
+//   }
 
   function validateEmpty(subject) {
     console.log(subject)
@@ -60,6 +65,22 @@ contactForm.addEventListener('submit', function (e) {
     }
   }
 
+  
+    function validateIsEmail(email) {
+        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
+
+  
+    function validateMinLength(entry) {
+        console.log(entry)
+        if(entry.value.length < 4 ) {
+            showError(entry)
+        }
+        else {
+            showSuccess(entry)
+        }
+    }
 
 
 
