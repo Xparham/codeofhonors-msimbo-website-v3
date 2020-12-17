@@ -8,62 +8,63 @@ const content = document.getElementById('content')
 contactForm.addEventListener('submit', function (e) {
     e.preventDefault()
   
-    validateEmpty(entry)
-    validateEmpty(email)
-    validateEmpty(subject)
-    validateEmpty(content)
+    validateEntryEmpty(entry)
+    validateEmailEmpty(email)
+    validateSubjectEmpty(subject)
+    validateContentEmpty(content)
 
     validateIsEmail(email)
 
 
-    validateMinLength(entry)
-    validateMinLength(content)
-    validateMinLength(subject)
 
+
+})
+
+  function validateEntryEmpty(input) {
+    // console.log(entry.value)
+    if (input.value === '') {
+        showError(input, '❌ Please enter your name')
+    } else {
+        showSuccess(input, '✔️ Thank You')
+    }
+}
+
+function validateEmailEmpty(input) {
+    // console.log(entry.value)
+    if (input.value === '') {
+        showError(input, '❌ Please enter a valid Email address')
+    } else {
+        showSuccess(input, '✔️ Thank You')
+    }
+}
   
-
-    validateIsEmail(email)
-   
-
-
-   
-  })
-
-  function validateEmpty(entry) {
-    console.log(entry)
-    if (entry.value === '') {
-        showError(entry)
+function validateSubjectEmpty(input) {
+    // console.log(entry.value)
+    if (input.value === '') {
+        showError(input, '❌ Please enter your subject matter')
     } else {
-        showSuccess(entry)
+        showSuccess(input, '✔️ Thank You')
     }
-  }
+}
 
-//   function validateEmpty(email) {
-//     console.log(email)
-//     if (email.value === '') {
-//         showError(email)
-//     } else {
-//         showSuccess(email)
-//     }
-//   }
-
-  function validateEmpty(subject) {
-    console.log(subject)
-    if (subject.value === '') {
-        showError(subject)
+function validateContentEmpty(input) {
+    // console.log(entry.value)
+    if (input.value === '') {
+        showError(input, '❌ Please enter your message')
     } else {
-        showSuccess(subject)
+        showSuccess(input, '✔️ Thank You')
     }
-  }
 
-  function validateEmpty(content) {
-    console.log(content)
-    if (content.value === '') {
-        showError(content)
-    } else {
-        showSuccess(content)
+    if (input.value.length > 50){
+        showError(input, '❌ Message is too long, reduce size for submission')
     }
-  }
+ }
+
+
+
+
+
+
 
   
     function validateIsEmail(email) {
@@ -72,15 +73,7 @@ contactForm.addEventListener('submit', function (e) {
     }
 
   
-    function validateMinLength(entry) {
-        console.log(entry)
-        if(entry.value.length < 4 ) {
-            showError(entry)
-        }
-        else {
-            showSuccess(entry)
-        }
-    }
+  
 
 
 
@@ -94,14 +87,17 @@ contactForm.addEventListener('submit', function (e) {
 
 
 
-  function showError(input){
-    // steps to do this...
-    console.log(input)
-    console.log(input.nextElementSibling)
-  input.nextElementSibling.innerHTML = '<small class="error"> ❌ Please enter your username </small>'
+
+
+
+
+    function showError(input, msg){
+        console.log(input)
+        console.log(input.nextElementSibling)
+        input.nextElementSibling.innerHTML = `<small class="error">${msg}</small>`
     }
   
-  function showSuccess (input) {
-    console.log('you are ready to submit')
-  input.nextElementSibling.innerHTML = '<small class="success"> ✔️ Success </small>'
-  }
+    function showSuccess (input, msg) {
+        console.log('you are ready to submit')
+        input.nextElementSibling.innerHTML = `<small class="success">${msg}</small>`
+    }
