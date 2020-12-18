@@ -2,7 +2,15 @@
 @tailwind components;
 
 .input {
-    @apply w-full bg-gray-200 rounded-md p-1
+    @apply w-full bg-gray-200 rounded-md p-1;
+}
+
+.success {
+    @apply text-green-200;
+}
+
+.error {
+    @apply text-red-200;
 }
 
 

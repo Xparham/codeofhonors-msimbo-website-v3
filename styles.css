@@ -9,7 +9,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 15px;
-    background-color: whitesmoke;
+    background-color: white;
 }
 
 .logo {
@@ -21,7 +21,7 @@ header {
 .overlay__content a {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
-    color: Black;
+    color: red;
     text-decoration: none;
 }
 
@@ -39,7 +39,7 @@ header {
 }
 
 .nav__links li a:hover {
-    color: red;
+    color: darkgray;
 }
 
 .cta {
@@ -94,14 +94,14 @@ header {
 
 .overlay a:hover,
 .overlay a:focus {
-    color: red;
+    color: white;
 }
 .overlay .close {
     position: absolute;
     top: 20px;
     right: 45px;
     font-size: 60px;
-    color: #edf0f1;
+    color: red;
 }
 
 @media screen and (max-height: 450px) {
@@ -169,7 +169,7 @@ header {
     padding: 10px;
     height: 150vh;
     /*read more */
-    background: url("img/florian-olivo-4hbJ-eymZ1o-unsplash.jpg")
+    background: url("img/big-back.jpg")
     no-repeat center center/cover;
 }
 
@@ -180,7 +180,8 @@ header {
     /*min-height: calc(100vh - 70px);*/
     background: no-repeat center;
     margin-top: 200px;
-    box-shadow: inset;
+    
+    
 }
 
 /* For msimbo logo */
@@ -192,7 +193,8 @@ header {
     top: 60px;
     left: 10px;
     border: 1px;
-    width: 150px;
+    width: 200px;
+    padding-bottom: 30px;
     text-shadow: red 10px 10px 10px;
 
 }
@@ -205,7 +207,8 @@ header {
     margin-top: 2rem;
     color: white;
     font-size: 2rem;
-    text-shadow: lightskyblue 10px 10px 10px;
+    text-shadow: red 10px 10px 10px;
+    font-family:  "Roboto", sans-serif;
 }
 /*End of Ahmed CSS*/
 
@@ -239,18 +242,18 @@ header {
 
 
 /*Xavier Section start */
-.X-container {
+/* .X-container {
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
     position: relative;
-    bottom: 0;
+    bottom: 0; */
 
 
 
-}
+/* } */
 
-#background {
+/* #background {
     display: flex;
     justify-content: space-around;
     background: url("img/triple-img-whole.png") no-repeat center center/cover;
@@ -258,11 +261,11 @@ header {
     padding-top: 180px;
 
 
-}
+} */
 
-#background div:nth-child(1) {
+/* #background div:nth-child(1) { */
     /* width: 150px; */
-    width: 25%;
+    /* width: 25%;
     height: 400px;
     background: white;
     text-align: center;
@@ -271,35 +274,35 @@ header {
     box-shadow: 1px 2px 2px 2px;
 
 
-}
+} */
 
-#background div:nth-child(2) {
+/* #background div:nth-child(2) { */
     /* width: 150px; */
-    width: 25%;
+    /* width: 25%;
     height: 400px;
     background: white;
     text-align: center;
     padding: 20px;
     box-shadow: 1px 2px 2px 2px;
-}
+} */
 
 
-#background div:nth-child(3) {
+/* #background div:nth-child(3) { */
     /* width: 150px; */
-    width: 25%;
+    /* width: 25%;
     height: 400px;
     background: white;
     text-align: center;
     border-radius: 0 15px 15px 0;
     padding: 20px;
     box-shadow: 1px 2px 2px 2px
-}
+} */
 
-p {
+/* p {
     font-family:  'Roboto Slab', serif;
     border: black;
     border-bottom: 1px;
-}
+} */
 
 
 
